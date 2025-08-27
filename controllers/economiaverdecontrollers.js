@@ -30,3 +30,14 @@ const update = (req, res) => {
   }
 };
 
+const remove = (req, res) => {
+  const index = iniciativas.findIndex(i => i.id === parseInt(req.params.id));
+  if (index !== -1) {
+    iniciativas.splice(index, 1);
+    res.json({ message: "Iniciativa removida com sucesso" });
+  } else {
+    res.status(404).json({ message: "Iniciativa não encontrada" });
+  }
+};
+
+module.exports = { getAll, getById, create, update, remove };
