@@ -30,14 +30,3 @@ const update = (req, res) => {
   }
 };
 
-const remove = (req, res) => {
-  const index = recursos.findIndex(r => r.id === parseInt(req.params.id));
-  if (index !== -1) {
-    recursos.splice(index, 1);
-    res.json({ message: "Recurso removido com sucesso" });
-  } else {
-    res.status(404).json({ message: "Recurso não encontrado" });
-  }
-};
-
-module.exports = { getAll, getById, create, update, remove };
