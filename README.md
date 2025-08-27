@@ -18,3 +18,24 @@ Rotas : direcionam as requisições para os controladores corretos.
  ┃ ┗  app.js        # Arquivo principal
  ┣  package.json
  ┗  README.md
+Tecnologias utilizadas
+Node.js
+Expressar
+Nodemon (para desenvolvimento)
+ Instalação e uso
+Clonar o repositório
+git clone https://github.com/dnlaie14/Projeto-M4.git
+cd NOME-DO-PROJETO
+
+npm install
+
+npm run dev
+Servidor rodando em http://localhost:3000/
+ Rotas principais (exemplo)
+Método    Rota    Descrição
+PEGAR    /produtos    Lista de todos os produtos
+PUBLICAR    /produtos    Criar um novo produto
+COLOCAR    /produtos/:id    Atualizar produto por ID
+EXCLUIR    /produtos/:id    Remover produto por ID
+ Autores
+Tábata Macedo
